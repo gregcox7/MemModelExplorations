@@ -1,0 +1,7 @@
+book_filename: "ModelExplorations"
+new_session: yes
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Expedition "
+output_dir: "docs"
