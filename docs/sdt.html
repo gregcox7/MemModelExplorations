@@ -162,14 +162,14 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="sdt.html"><a href="sdt.html"><i class="fa fa-check"></i><b>1</b> Strength Theory and Signal Detection</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="sdt.html"><a href="sdt.html#follow-the-blazes-to-your-own-strength-model"><i class="fa fa-check"></i><b>1.1</b> Follow the blazes to your own strength model</a>
+<li class="chapter" data-level="1.1" data-path="sdt.html"><a href="sdt.html#on-trail-building-your-own-strength-model"><i class="fa fa-check"></i><b>1.1</b> On trail: Building your own strength model</a>
 <ul>
 <li class="chapter" data-level="1.1.1" data-path="sdt.html"><a href="sdt.html#multiple-targets-and-foils"><i class="fa fa-check"></i><b>1.1.1</b> Multiple targets and foils</a></li>
 <li class="chapter" data-level="1.1.2" data-path="sdt.html"><a href="sdt.html#multiple-criteria"><i class="fa fa-check"></i><b>1.1.2</b> Multiple criteria</a></li>
 <li class="chapter" data-level="1.1.3" data-path="sdt.html"><a href="sdt.html#making-an-roc"><i class="fa fa-check"></i><b>1.1.3</b> Making an ROC</a></li>
 <li class="chapter" data-level="1.1.4" data-path="sdt.html"><a href="sdt.html#modeling-strengths"><i class="fa fa-check"></i><b>1.1.4</b> Modeling strengths</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="sdt.html"><a href="sdt.html#going-off-trail"><i class="fa fa-check"></i><b>1.2</b> Going off-trail</a></li>
+<li class="chapter" data-level="1.2" data-path="sdt.html"><a href="sdt.html#off-trail"><i class="fa fa-check"></i><b>1.2</b> Off-trail</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -200,8 +200,8 @@ div.csl-indent {
 <li><em>Separability</em>: It is often possible to “swap out” one piece of a model for another, where the two pieces appear to perform the same basic function.</li>
 <li><em>Integrality</em>: The behavior of the model arises from all of its components and how they are put together; even if one piece seems functionally equivalent to another, they may lead to very different behavior from the model.</li>
 </ol>
-<div id="follow-the-blazes-to-your-own-strength-model" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Follow the blazes to your own strength model</h2>
+<div id="on-trail-building-your-own-strength-model" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> On trail: Building your own strength model</h2>
 <p>There are three basic ingredients to a strength model of recognition, instantiated in the following chunk of R code:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="sdt.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define one or more decision criteria</span></span>
 <span id="cb1-2"><a href="sdt.html#cb1-2" aria-hidden="true" tabindex="-1"></a>criterion <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
@@ -380,13 +380,13 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<div id="going-off-trail" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Going off-trail</h2>
+<div id="off-trail" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Off-trail</h2>
 <p>Following the trail this far has gotten us to a reasonably complete model of recognition by signal detection, according to strength theory. Now it’s your turn to go off-trail and explore on your own!</p>
 <ol style="list-style-type: decimal">
 <li>If study strength increments are normally distributed, this means it is possible for them to be <em>negative</em>, that is, for studying an item to actually decrease its strength from its initial level. Could this be plausible under some circumstances? If it is plausible, what does this say about how we should interpret what “strength” means in this context?</li>
 <li>Try swapping out the normally-distributed strength increment for one that is <em>exponentially</em> distributed. In R, you can draw random samples from an exponential distribution with the <code>rexp</code> function (check out the help pages to see what parameters the function takes). How close can you get the resulting ROC to looking linear across most of its range? What does this say about the kinds of conclusions we can draw based on the shape of ROC’s? Are there reasons why the exponential distribution might be a better or worse model for study strength increments?</li>
-<li>Pick an alternative recognition model (e.g., a threshold model or a hybrid model or one of your own ideas) and implement it by modifying the code we built on trail. What choices did you make about how to implement the model you chose and why? Did you stick with the same basic structure as the model we built above, or did you modify it at all? Were you able to find any unique or striking—but still plausible—predictions from your chosen model?</li>
+<li>Pick an alternative recognition model (e.g., a threshold model or a hybrid model or one of your own ideas) and implement it by modifying the code we built on trail. (You may wish to check out the figures in Yonelinas &amp; Parks, 2007, for guidance.) What choices did you make about how to implement the model you chose and why? Did you stick with the same basic structure as the model we built above, or did you modify it at all? Were you able to find any unique or striking—but still plausible—predictions from your chosen model?</li>
 </ol>
 
 </div>

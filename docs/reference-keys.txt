@@ -1,5 +1,5 @@
 sdt
-follow-the-blazes-to-your-own-strength-model
+on-trail-building-your-own-strength-model
 multiple-targets-and-foils
 multiple-criteria
 making-an-roc
@@ -7,4 +7,4 @@ modeling-strengths
 variability-in-initial-strength
 fine-grained-rocs
 variability-in-study-strength-increments
-going-off-trail
+off-trail

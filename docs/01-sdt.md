@@ -7,7 +7,7 @@ In this expedition, we will build, piece by piece, a model that instantiates rec
 1. *Separability*: It is often possible to "swap out" one piece of a model for another, where the two pieces appear to perform the same basic function.
 2. *Integrality*: The behavior of the model arises from all of its components and how they are put together; even if one piece seems functionally equivalent to another, they may lead to very different behavior from the model.
 
-## Follow the blazes to your own strength model
+## On trail: Building your own strength model
 
 There are three basic ingredients to a strength model of recognition, instantiated in the following chunk of R code:
 
@@ -274,10 +274,10 @@ ggplot(mapping=aes(x = roc_foil, y = roc_target)) +
 
 <img src="01-sdt_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 
-## Going off-trail
+## Off-trail
 
 Following the trail this far has gotten us to a reasonably complete model of recognition by signal detection, according to strength theory.  Now it's your turn to go off-trail and explore on your own!
 
 1. If study strength increments are normally distributed, this means it is possible for them to be *negative*, that is, for studying an item to actually decrease its strength from its initial level.  Could this be plausible under some circumstances?  If it is plausible, what does this say about how we should interpret what "strength" means in this context?
 2. Try swapping out the normally-distributed strength increment for one that is *exponentially* distributed.  In R, you can draw random samples from an exponential distribution with the `rexp` function (check out the help pages to see what parameters the function takes).  How close can you get the resulting ROC to looking linear across most of its range?  What does this say about the kinds of conclusions we can draw based on the shape of ROC's?  Are there reasons why the exponential distribution might be a better or worse model for study strength increments?
-3. Pick an alternative recognition model (e.g., a threshold model or a hybrid model or one of your own ideas) and implement it by modifying the code we built on trail.  What choices did you make about how to implement the model you chose and why?  Did you stick with the same basic structure as the model we built above, or did you modify it at all?  Were you able to find any unique or striking---but still plausible---predictions from your chosen model?
+3. Pick an alternative recognition model (e.g., a threshold model or a hybrid model or one of your own ideas) and implement it by modifying the code we built on trail.  (You may wish to check out the figures in Yonelinas & Parks, 2007, for guidance.)  What choices did you make about how to implement the model you chose and why?  Did you stick with the same basic structure as the model we built above, or did you modify it at all?  Were you able to find any unique or striking---but still plausible---predictions from your chosen model?
