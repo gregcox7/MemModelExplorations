@@ -1,7 +1,7 @@
 --- 
 title: "Exploring Models of Memory"
 author: "Greg Cox"
-date: "2021-09-08"
+date: "2021-09-09"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

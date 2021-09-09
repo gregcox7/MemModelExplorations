@@ -134,7 +134,7 @@ We now have a model that instantiates the processes by which strength theory say
 
 We have *not*, however, modeled the distributions of target and foil strength.  Instead, we have just plugged in some numbers.  Most SDT theories model these strengths as random variables that are sampled from a distribution.
 
-Another benefit to modeling the strengths is that we can model a situation with a huge number of target/foil trials, far more than would be feasible in any experiment with living creatures.  As a result, we can essentially obtain perfect estimates of things like ROC curves by simulating many trials.
+Another benefit to modeling the strengths is that we can model a situation with a huge number of target/foil trials, far more than would be feasible in any experiment with living creatures.  As a result, we can essentially obtain perfect estimates of things like ROC curves by simulating many trials (we will keep track of this number using a variable that we will define called `num_trials`).
 
 #### Variability in initial strength
 
@@ -145,8 +145,11 @@ Let's begin with a simple model in which we assume that all items initially have
 criteria <- c(-Inf, -0.5, 0, 0.5, 1, 1.5, Inf)
 
 # 2. Define the strength of the target (studied) and foil (unstudied) items in memory
-foil_strength <- rnorm(n = 10000, mean = 0, sd = 1)
-target_initial_strength <- rnorm(n = 10000, mean = 0, sd = 1)
+num_trials <- 10000
+
+foil_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+target_initial_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+
 study_strength_increment <- 1
 target_strength <- target_initial_strength + study_strength_increment
 
@@ -168,7 +171,7 @@ ggplot(mapping=aes(x = roc_foil, y = roc_target)) +
 
 #### Fine-grained ROC's
 
-Cool!  Again, since we're not using a living creature, we can also ask the model to use an absurdly large number of criteria.  The value of this is that it gives us a much more fine-grained picture of the ROC.  Even though we couldn't get such a picture in real life, if the model is a reasonably good approximation to reality, knowing the detailed model ROC let's us know the kind of shapes we would *expect* to see in an experiment.
+Cool!  Again, since we're not using a living creature, we can also ask the model to use an absurdly large number of criteria (again, to keep track of this, we will make it into a variable called `num_criteria`).  The value of this is that it gives us a much more fine-grained picture of the ROC.  Even though we couldn't get such a picture in real life, if the model is a reasonably good approximation to reality, knowing the detailed model ROC let's us know the kind of shapes we would *expect* to see in an experiment.
 
 ```{r}
 # 1. Define one or more decision criteria
@@ -176,8 +179,11 @@ num_criteria <- 100
 criteria <- c(-Inf, seq(-6, 6, length.out = num_criteria - 1), Inf)
 
 # 2. Define the strength of the target (studied) and foil (unstudied) items in memory
-foil_strength <- rnorm(n = 10000, mean = 0, sd = 1)
-target_initial_strength <- rnorm(n = 10000, mean = 0, sd = 1)
+num_trials <- 10000
+
+foil_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+target_initial_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+
 study_strength_increment <- 1
 target_strength <- target_initial_strength + study_strength_increment
 
@@ -207,9 +213,12 @@ num_criteria <- 100
 criteria <- c(-Inf, seq(-6, 6, length.out = num_criteria - 1), Inf)
 
 # 2. Define the strength of the target (studied) and foil (unstudied) items in memory
-foil_strength <- rnorm(n = 10000, mean = 0, sd = 1)
-target_initial_strength <- rnorm(n = 10000, mean = 0, sd = 1)
-study_strength_increment <- rnorm(n = 10000, mean = 1, sd = 1)
+num_trials <- 10000
+
+foil_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+target_initial_strength <- rnorm(n = num_trials, mean = 0, sd = 1)
+
+study_strength_increment <- rnorm(n = num_trials, mean = 1, sd = 1)
 target_strength <- target_initial_strength + study_strength_increment
 
 # 3. Compare the strengths of each test item to the criteria to arrive at a decision
